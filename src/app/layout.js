@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { Archivo_Narrow } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const archivo_Narrow = Archivo_Narrow({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Create Next App",
@@ -12,9 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className="bg-black">
+			<body className={`bg-black text-white ${archivo_Narrow.className}`}>
 				<NavBar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
