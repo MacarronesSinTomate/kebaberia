@@ -1,9 +1,9 @@
-import Section from "@/Components/Section/Section";
-import Image from "next/image";
+
+import Section from "@/components/Section/Section";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mt-[200px]">
       <Section height={200} percentage={70} gap={1} className={"bg-white"} 
         propChildrenLeft={
           <p>KAKA</p>
