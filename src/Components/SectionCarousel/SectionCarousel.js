@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 export default function SectionCarousel({
   classname = "",
@@ -8,11 +9,8 @@ export default function SectionCarousel({
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const handleClickNext = () => {
-    console.log("click")
-    setCurrentIndex( value => ((value + 1) % carouselItems.length) )
-  }
-  const handleClickPrev = () => setCurrentIndex( value => ((value - 1 + items.length) % items.length) )
+  const handleClickNext = () => setCurrentIndex( value => ((value + 1) % carouselItems.length) )
+  const handleClickPrev = () => setCurrentIndex( value => ((value - 1 + carouselItems.length) % carouselItems.length) )
 
   const currentItems = []
   for (let i = 0; i < numberOfItemsToShow; ++i) { 
@@ -35,8 +33,8 @@ export default function SectionCarousel({
       </div>
 
       <div className="flex-[1] w-full h-full flex items-center justify-around ">
-        <button onClick={handleClickPrev} className="w-10 h-10 bg-slate-800 rounded-full">L</button>
-        <button onClick={handleClickNext} className="w-10 h-10 bg-slate-800 rounded-full">R</button>
+        <button onClick={handleClickPrev} className="w-10 h-10 flex justify-center items-center bg-slate-800 rounded-full"><FaAngleLeft /></button>
+        <button onClick={handleClickNext} className="w-10 h-10 flex justify-center items-center bg-slate-800 rounded-full"><FaAngleRight /></button>
       </div>
     </div>
   );

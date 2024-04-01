@@ -1,10 +1,12 @@
+import { FaShoppingBag } from "react-icons/fa";
+
 export default function SectionProduct({
   className = "",
   title = "Kebab",
   subtitle = "Test",
   buttonText = "Pedir Ahora",
   price = "69.99",
-  cartButton = "A",
+  cartButton = <FaShoppingBag />,
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus tellus id sapien venenatis luctus. Donec pellentesque condimentum ipsum."
 }) {
 
@@ -24,7 +26,7 @@ export default function SectionProduct({
         <span className="text-3xl"> 
           { "$ " + price }
         </span>
-        <button className="ml-5 rounded-full bg-[#b02f15] h-10 w-10"> 
+        <button className="ml-5 flex items-center justify-center rounded-full bg-[#b02f15] h-10 w-10"> 
           { cartButton }
         </button>
       </div>
