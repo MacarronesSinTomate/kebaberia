@@ -1,7 +1,7 @@
 import { Archivo_Narrow } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar/NavBar";
-import Footer from "@/components/Footer/Footer";
+import NavBar from "@/Components/NavBar/NavBar";
+import Footer from "@/Components/Footer/Footer";
 
 const archivo_Narrow = Archivo_Narrow({ subsets: ["latin"] });
 

@@ -3,7 +3,7 @@ import SectionCarousel from "@/Components/SectionCarousel/SectionCarousel";
 import SectionContact from "@/Components/SectionContact/SectionContact";
 import SectionDiscount from "@/Components/SectionDiscount/SectionDiscount";
 import SectionProduct from "@/Components/SectionProduct/SectionProduct";
-import Section from "@/components/Section/Section";
+import Section from "@/Components/Section/Section";
 import Image from 'next/image'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         percentage={50} 
         gap={0} 
         classNameGeneral={""} 
-        classNameLeft={"bg-black text-white"}
+        classNameLeft={"bg-black text-white pt-20"}
         classNameRight={"bg-[#b02f15] rounded-tl-none rounded-bl-3xl"}
         propChildrenLeft={<SectionProduct />} 
         propChildrenRight=
