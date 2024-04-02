@@ -5,7 +5,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 export default function SectionCarousel({
   classname = "",
   carouselItems = [],
-  numberOfItemsToShow = 3
+  numberOfItemsToShow = 4
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -19,6 +19,11 @@ export default function SectionCarousel({
 
   return (
     <div className={"w-full h-full flex items-center justify-center pl-5 pr-5 absolute " + classname}>
+
+      <div className="flex-[1] w-full h-full flex items-center justify-around ">
+        <button onClick={handleClickPrev} className="w-10 h-10 flex justify-center items-center bg-slate-800 rounded-full"><FaAngleLeft /></button>
+      </div>
+      
       <div className="flex-[4] flex w-full h-full">
         { 
           currentItems.map((item, index) => {
@@ -33,7 +38,6 @@ export default function SectionCarousel({
       </div>
 
       <div className="flex-[1] w-full h-full flex items-center justify-around ">
-        <button onClick={handleClickPrev} className="w-10 h-10 flex justify-center items-center bg-slate-800 rounded-full"><FaAngleLeft /></button>
         <button onClick={handleClickNext} className="w-10 h-10 flex justify-center items-center bg-slate-800 rounded-full"><FaAngleRight /></button>
       </div>
     </div>
