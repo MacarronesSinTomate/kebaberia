@@ -18,7 +18,7 @@ export default function SectionCarousel({
   }
 
   return (
-    <div className={"w-full h-full flex items-center justify-center pl-5 pr-5 " + classname}>
+    <div className={"w-full h-full flex items-center justify-center pl-5 pr-5 absolute " + classname}>
       <div className="flex-[4] flex w-full h-full">
         { 
           currentItems.map((item, index) => {
