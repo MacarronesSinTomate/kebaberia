@@ -37,29 +37,30 @@ export default function Section({
     : ""
 
   return (
-  <div className={"text-black sm:!mb-0 " + classNameGeneral} 
-  style={{
-    width: "100%",
-    height: `${height}px`,
-    position: "relative",
-    marginBottom: `${height}px`
-  }}>
-    <div className="sm:absolute w-full h-full relative flex justify-start">
-      <div className={"flex justify-center items-center relative p-3 h-full rounded-r-lg max-sm:!w-[90%] " + classNameLeft}
-        style={{ width: `${percentage}%` }}
-      >
-        { backgroundMaskLeft }
-        { propChildrenLeft }
-      </div>
+  <div className={"w-full text-black flex flex-col sm:flex-row max-sm:!h-auto " + classNameGeneral} 
+    style={{
+      height: `${height}px`,
+      position: "relative"
+    }}
+  >
+    <div className={"flex justify-center items-center relative p-3 h-full w-full rounded-r-lg max-sm:!flex-1 " + classNameLeft}
+      style={{ 
+        flex: `${percentage} ${percentage} 0%`, 
+        minHeight: `${height}px`
+      }}
+    >
+      { backgroundMaskLeft }
+      { propChildrenLeft }
     </div>
     
-    <div className="sm:absolute w-full h-full relative flex justify-end">
-      <div className={"flex justify-center items-center relative p-3 h-full rounded-l-lg max-sm:!w-[90%] " + classNameRight}
-        style={{ width: `${100 - gap - percentage}%` }}
-      >
-        { backgroundMaskRight }
-        { propChildrenRight }    
-      </div>
+    <div className={"flex justify-center items-center relative p-3 h-full w-full rounded-l-lg max-sm:!flex-1 " + classNameRight}
+      style={{ 
+        flex: `${100 - percentage} ${100 - percentage} 0%`, 
+        minHeight: `${height}px` 
+      }}
+    >
+      { backgroundMaskRight }
+      { propChildrenRight }    
     </div>
   </div>
   );
