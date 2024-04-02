@@ -5,10 +5,11 @@ import SectionDiscount from "@/Components/SectionDiscount/SectionDiscount";
 import SectionProduct from "@/Components/SectionProduct/SectionProduct";
 import Section from "@/Components/Section/Section";
 import Image from 'next/image'
+import MainCentered from "@/Components/MainCentered/MainCentered";
 
 export default function Home() {
   return (
-    <main className="">
+    <MainCentered width={80} className="">
       <Section 
         height={550} 
         percentage={50} 
@@ -91,6 +92,6 @@ export default function Home() {
         }
       />
 
-    </main>
+    </MainCentered>
   );
 }
